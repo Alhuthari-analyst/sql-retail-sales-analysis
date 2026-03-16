@@ -46,11 +46,11 @@ AND s.`Product Name` = p.`Product Name`
 GROUP BY s.`Product Name`
 ORDER BY profit DESC;
 
--- What are the top 3 transactions by total amount in each product category?
+-- What are the top 3 most profitable transactions in each product category?
 SELECT * FROM 
 (SELECT s.`Product Category`,
 (s.`Total Amount` - p.`Cost Per Unit` * s.Quantity) AS profit,
-ROW_NUMBER() OVER(PARTITION BY s.`Product Category`ORDER BY s.`Total Amount` DESC) AS n
+ROW_NUMBER() OVER(PARTITION BY s.`Product Category`ORDER BY (s.`Total Amount` - p.`Cost Per Unit` * s.Quantity) DESC) AS n
 FROM sales s JOIN products p
 ON s.`Product Category` = p.`Product Category`
 AND s.`Product Name` = p.`Product Name`) t
@@ -74,6 +74,13 @@ AND s.`Product Name` = p.`Product Name`
 GROUP BY month
 ORDER BY profit desc;
 
+-- Which product category generates the highest total sales revenue?
+SELECT `Product Category`,
+SUM(`Total Amount`) AS total_sales
+FROM sales
+GROUP BY `Product Category`
+ORDER BY total_sales DESC;
+
 -- What is the average total amount per product category?
 SELECT `Product Category`,
 AVG(`Total Amount`) AS avg_sales
@@ -88,44 +95,36 @@ FROM sales
 GROUP BY `Age Group`
 ORDER BY total_spent DESC;
 
+-- How do product categories compare in terms of total revenue,
+-- number of transactions, and average order value?
+SELECT 
+    `Product Category`,
+    COUNT(*) AS total_transactions, 
+    SUM(`Total Amount`) AS total_revenue, 
+    AVG(`Total Amount`) AS average_order_value
+FROM sales
+GROUP BY `Product Category`
+ORDER BY average_order_value DESC;
+
+-- Which products are high-performing in terms of total revenue and number of orders?
+SELECT 
+    `Product Name`,
+    COUNT(*) AS number_of_orders,
+    SUM(`Total Amount`) AS total_sales
+FROM sales
+GROUP BY `Product Name`
+HAVING SUM(`Total Amount`) > 50000
+ORDER BY total_sales DESC;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+SELECT Gender,
+    COUNT(*) AS total_transactions, 
+    SUM(`Total Amount`) AS total_revenue, 
+    AVG(`Total Amount`) AS avg_spending, 
+    SUM(s.`Total Amount` - p.`Cost Per Unit` * s.Quantity) AS total_profit 
+FROM sales s JOIN products p 
+ON s.`Product Category` = p.`Product Category`
+and s.`Product Name` = p.`Product Name`
+GROUP BY Gender
+ORDER BY total_revenue DESC;
 
