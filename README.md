@@ -31,7 +31,39 @@ Additionally, a **`products`** table was created containing:
 
 ## Data Preparation
 - Converted date from string to DATE format using:
-```sql
+```sql 
 STR_TO_DATE()
+- Created a products table
+- Joined tables using JOIN
 
+## Key Business Questions Answered
+ Revenue Analysis
+Which product category generates the highest total revenue?
+What is the total revenue per month?
+How do product categories compare in terms of:
+Total revenue
+Number of transactions
+Average order value
 
+---
+
+## Customer Analysis
+Customer segmentation based on spending levels:
+Low Spending
+Medium Spending
+High Spending
+Analysis by:
+Age group
+Gender
+
+---
+
+## Profit Analysis
+- Profit was calculated using:
+```sql
+Total Amount - (Cost Per Unit × Quantity)
+
+This analysis identified:
+- Most profitable products
+- Top 3 most profitable transactions per category (using window functions)
+- Transactions resulting in losses
