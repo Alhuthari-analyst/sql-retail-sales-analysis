@@ -37,6 +37,14 @@ The goal is to understand customer behavior, evaluate product performance, and i
 
 ---
 
+## Recommendations
+- Increase focus on top-performing products to maximize revenue
+- Align marketing strategies with high-performing months
+- Target high-value customer segments
+- Optimize pricing to reduce loss-making transactions
+
+---
+
 ## How to Use
 - Import the dataset into MySQL  
 - Run the SQL scripts  
@@ -47,8 +55,3 @@ The goal is to understand customer behavior, evaluate product performance, and i
 ## Future Improvements
 - Build a dashboard using **Power BI** or **Tableau**  
 - Extend analysis with additional datasets  
-
----
-
-## Author
-**Zainab Alhuthari**
