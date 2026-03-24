@@ -39,13 +39,11 @@ The analysis provides actionable insights to optimize product strategy, customer
 
 ---
 
-## How to Use
-- Import the dataset into MySQL  
-- Run the SQL scripts  
-- Execute queries to reproduce the analysis  
+## Lessons Learnt
+- Gained proficiency in **SQL** for data analysis  
+- Learned the importance of **data cleaning** for accurate insights
 
 ---
 
-## Lessons Learnt
-- Gained proficiency in **SQL** for data analysis  
-- Learned the importance of **data cleaning** for accurate insights  
+## Dataset
+The dataset used in this project is included in this repository as a CSV file.
