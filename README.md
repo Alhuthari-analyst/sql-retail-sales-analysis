@@ -3,67 +3,52 @@
 ---
 
 ## Project Overview
-This project analyzes a retail sales dataset containing **1000 transactions** using SQL to extract meaningful business insights.  
-The main objective is to understand customer behavior, evaluate product performance, and identify key revenue and profit trends.
+This project analyzes a retail sales dataset using SQL to extract key business insights.  
+The goal is to understand customer behavior, evaluate product performance, and identify revenue and profit trends.
 
 ---
 
 ## Tools & Technologies
 - **MySQL**
-- **SQL** (Joins, Aggregations, Window Functions, CASE Statements)
-- **GitHub**
-
----
-
-## Dataset Description
-The dataset includes:
-- Transaction details  
-- Product category and product name  
-- Quantity and total amount  
-- Customer demographics (**Age Group, Gender**)  
-- Transaction date  
-
-Additionally, a **`products`** table was created containing:
-- Supplier  
-- Cost per unit  
+- **SQL** (Joins, Aggregations, Window Functions, subqueries, CASE Statements)
 
 ---
 
 ## Data Preparation
-- Converted date from string to DATE format using:
-```sql 
-STR_TO_DATE()
-- Created a products table
-- Joined tables using JOIN
-
-## Key Business Questions Answered
- Revenue Analysis
-Which product category generates the highest total revenue?
-What is the total revenue per month?
-How do product categories compare in terms of:
-Total revenue
-Number of transactions
-Average order value
+- Converted date from string to DATE format using `STR_TO_DATE()`  
+- Created a **products** table  
+- Joined tables using **JOIN**
 
 ---
 
-## Customer Analysis
-Customer segmentation based on spending levels:
-Low Spending
-Medium Spending
-High Spending
-Analysis by:
-Age group
-Gender
+## Key Analysis Areas
+- Revenue and profit analysis  
+- Customer segmentation  
+- Product and category performance  
+- Time-based trends  
 
 ---
 
-## Profit Analysis
-- Profit was calculated using:
-```sql
-Total Amount - (Cost Per Unit × Quantity)
+## Key Insights
+- **May generated the highest total profit**, indicating a strong seasonal performance  
+- The **Cap product** was the top performer, leading in **revenue, number of orders, and total profit**  
+- **Electronics generated the highest total revenue**, while **Clothing had the highest number of orders**, and **Beauty showed the highest average order value**  
+- **Female customers outperformed male customers** across all metrics, including **total orders, revenue, average spending, and profit**  
 
-This analysis identified:
-- Most profitable products
-- Top 3 most profitable transactions per category (using window functions)
-- Transactions resulting in losses
+---
+
+## How to Use
+- Import the dataset into MySQL  
+- Run the SQL scripts  
+- Execute queries to reproduce the analysis  
+
+---
+
+## Future Improvements
+- Build a dashboard using **Power BI** or **Tableau**  
+- Extend analysis with additional datasets  
+
+---
+
+## Author
+**Zainab Alhuthari**
