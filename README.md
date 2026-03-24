@@ -5,27 +5,21 @@
 ## Project Overview
 This project analyzes a retail sales dataset using SQL to extract key business insights.  
 The goal is to understand customer behavior, evaluate product performance, and identify revenue and profit trends.
+The analysis provides actionable insights to optimize product strategy, customer targeting, and revenue growth.
 
 ---
 
 ## Tools & Technologies
-- **MySQL**
-- **SQL** (Joins, Aggregations, Window Functions, subqueries, CASE Statements)
+- **SQL**: Data analysis using joins, aggregations, window functions, and CASE statements  
+- **Google Sheets**: Initial data cleaning and formatting
 
 ---
 
-## Data Preparation
-- Converted date from string to DATE format using `STR_TO_DATE()`  
-- Created a **products** table  
-- Joined tables using **JOIN**
-
----
-
-## Key Analysis Areas
-- Revenue and profit analysis  
-- Customer segmentation  
-- Product and category performance  
-- Time-based trends  
+## Project Workflow
+- **Data Cleaning:** Cleaned and prepared the dataset in **Google Sheets**, handling missing values and formatting columns.  
+- **SQL Preparation:** Added a new **Date** column, converted date strings to proper **DATE** format, created the **products** table, and joined it with the sales data.  
+- **Data Analysis:** Wrote SQL queries to analyze revenue, profit, product and category performance, and customer behavior.  
+- **Insights Extraction:** Identified key business insights and trends.
 
 ---
 
