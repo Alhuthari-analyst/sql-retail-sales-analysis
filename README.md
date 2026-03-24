@@ -52,6 +52,6 @@ The goal is to understand customer behavior, evaluate product performance, and i
 
 ---
 
-## Future Improvements
-- Build a dashboard using **Power BI** or **Tableau**  
-- Extend analysis with additional datasets  
+## Lessons Learnt
+- Gained proficiency in **SQL** for data analysis  
+- Learned the importance of **data cleaning** for accurate insights  
